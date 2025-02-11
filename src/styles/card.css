@@ -1,0 +1,66 @@
+/* Reset básico */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f3baec; /* Fondo claro */
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+  padding: 20px;
+  gap: 20px;
+}
+.containerCard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e66d9b88;
+  background-image: url(/public/images/background.png);
+  gap: 40px;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #dd83a7c1; /* Agregar borde */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: larger;
+  min-width: 250px; /* Evita que se haga más pequeña que esto */
+  min-height: 350px;
+}
+
+button {
+  background-color: #b5e8f0; /* Azul pastel */
+  color: #4b4a4a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #efd9d0; /* Azul pastel más oscuro */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #f6edeb; /* Azul pastel aún más oscuro */
+  transform: scale(1);
+}
