@@ -3,6 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
   margin: 0;
   padding: 0;
   background-color: #f3baec; /* Fondo claro */
