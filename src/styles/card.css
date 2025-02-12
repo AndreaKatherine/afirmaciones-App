@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: aqua;
+  background-color: rgb(250, 102, 163);
   padding: 20px;
   gap: 20px;
 }
