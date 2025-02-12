@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+
 const db = require("./src/db"); // Importamos la conexión
 
 const app = express();
@@ -20,7 +21,17 @@ app.get("/frase-aleatoria", (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+//----------------------------------------------------
+const path = require("path");
+
+// Servir archivos estáticos del frontend
+app.use(express.static(path.join(__dirname, "")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+//----------------------------------------------
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
