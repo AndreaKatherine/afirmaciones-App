@@ -1,8 +1,5 @@
-require("dotenv").config(); // 🔹 Cargar variables de entorno
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
-
 const db = require("./src/db"); // Importamos la conexión
 
 const app = express();
@@ -23,9 +20,7 @@ app.get("/frase-aleatoria", (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = process.env.PORT || 3001;
-
-//----------------------------------------------
+const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
