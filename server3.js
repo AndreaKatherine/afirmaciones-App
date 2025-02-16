@@ -1,26 +1,13 @@
-require("dotenv").config();
+require("dotenv").config(); // 🔹 Cargar variables de entorno
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
 
 const db = require("./src/db"); // Importamos la conexión
+
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-// Servir archivos estáticos del frontend
-// Servir archivos estáticos de 'public' para HTML, JS
-app.use(
-  express.static(path.join(__dirname, "public"), { extensions: ["html", "js"] })
-);
-
-// Servir archivos estáticos de 'src/styles' para CSS
-app.use("/styles", express.static(path.join(__dirname, "src", "styles")));
-
-// Ruta principal
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
 
 // Nueva ruta para obtener una frase aleatoria
 app.get("/frase-aleatoria", (req, res) => {
@@ -35,8 +22,10 @@ app.get("/frase-aleatoria", (req, res) => {
   );
 });
 
-// Iniciar el servidor en el puerto asignado por Render
+// Iniciar el servidor
 const PORT = process.env.PORT || 3001;
+
+//----------------------------------------------
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
