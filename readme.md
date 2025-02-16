@@ -20,4 +20,19 @@ PRUEBAAPP/
 │   ├── index.html           # Página HTML que muestra las frases
 │   ├── styles.css           # Estilos CSS para el frontend
 ├── README.md               # Documentación del proyecto
+
+-----------------------------------------------------------------------------------------------------------------
+SHOW TABLES;
++---------------------+
+| Tables_in_frases_db |
+
+SELECT * FROM frases;
++----+---------------------------------------------------------------------+
+| id | texto                                                               |
++----+---------------------------------------------------------------------+
+|  1 | Nunca es tarde para empezar                                         |
+|  2 | El éxito es la suma de pequeños esfuerzos repetidos día tras día.   |
+|  3 | Cada pequeño paso que doy me acerca a mis sueños                    |
+|  4 | Soy el arquitecto de mi destino y hoy construyo un futuro brillante |
++----+---------------------------------------------------------------------+
 ```

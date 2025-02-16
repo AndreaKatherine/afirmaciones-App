@@ -1,5 +1,7 @@
+require("dotenv").config(); // 🔹 Cargar variables de entorno
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const db = require("./src/db"); // Importamos la conexión
 
@@ -23,10 +25,9 @@ app.get("/frase-aleatoria", (req, res) => {
 // Iniciar el servidor
 const PORT = process.env.PORT || 3001;
 //----------------------------------------------------
-const path = require("path");
 
 // Servir archivos estáticos del frontend
-app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
