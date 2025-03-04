@@ -5,17 +5,15 @@ const path = require("path");
 
 const db = require("./src/db"); // Importamos la conexión
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 // Servir archivos estáticos del frontend
 // Servir archivos estáticos de 'public' para HTML, JS
-app.use(
-  express.static(path.join(__dirname, "public"), { extensions: ["html", "js"] })
-);
 
+app.use(express.static(path.join(__dirname, "public")));
 // Servir archivos estáticos de 'src/styles' para CSS
-app.use("/styles", express.static(path.join(__dirname, "src", "styles")));
+app.use(express.static(path.join(__dirname, "src")));
 
 // Ruta principal
 app.get("/", (req, res) => {

@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("generate");
   const output = document.getElementById("output");
 
+  const backUrl =
+    window.Location.hostname === "localhost"
+      ? "http://localhost:3001"
+      : "https://afirmaciones-app-1.onrender.com";
+
   button.addEventListener("click", () => {
     fetch("http://localhost:3001/frase-aleatoria")
       .then((response) => {
@@ -16,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => {
         console.error("Error al obtener la frase:", error);
         output.textContent =
-          "No se pudo obtener la frase. Intenta de nuevo más tarde."; // Mensaje de error para el usuario
+          "No se pudo obtener la frase. Intenta de nuevo más tarde.";
       });
   });
 });
