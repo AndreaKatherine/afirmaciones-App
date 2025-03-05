@@ -13,8 +13,6 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
 // Servir archivos estáticos de 'src/styles' para CSS
-app.use(express.static(path.join(__dirname, "src")));
-
 // Ruta principal
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));

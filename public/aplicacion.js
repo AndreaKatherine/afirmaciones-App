@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const output = document.getElementById("output");
 
   const backUrl =
-    window.Location.hostname === "localhost"
+    window.location.hostname === "localhost"
       ? "http://localhost:3001"
       : "https://afirmaciones-app-1.onrender.com";
 
