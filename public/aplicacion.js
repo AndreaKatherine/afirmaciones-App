@@ -2,13 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById("generate");
   const output = document.getElementById("output");
 
-  const backUrl =
-    window.location.hostname === "localhost"
-      ? "http://localhost:3001"
-      : "https://afirmaciones-app-1.onrender.com";
+  const backUrl = "https://afirmaciones-app-1.onrender.com";
 
   button.addEventListener("click", () => {
-    fetch("http://localhost:3001/frase-aleatoria")
+    fetch(`${backUrl}/frase-aleatoria`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error en la respuesta del servidor");
